@@ -1,0 +1,50 @@
+2025-03-12 14:37:43,011 - INFO - Erreur d'authentification
+2025-03-12 14:37:43,112 - CRITICAL - Mémoire insuffisante
+2025-03-12 14:37:43,213 - ERROR - Connexion réussie
+2025-03-12 14:37:43,314 - ERROR - Mémoire insuffisante
+2025-03-12 14:37:43,415 - CRITICAL - Fichier introuvable
+2025-03-12 14:37:43,516 - WARNING - Redémarrage du service
+2025-03-12 14:37:43,617 - CRITICAL - Erreur d'authentification
+2025-03-12 14:37:43,718 - DEBUG - Déconnexion de l'utilisateur
+2025-03-12 14:37:43,819 - WARNING - Fichier introuvable
+2025-03-12 14:37:43,919 - ERROR - Processeur en surcharge
+2025-03-12 14:37:44,020 - INFO - Tentative d'accès non autorisée
+2025-03-12 14:37:44,126 - WARNING - Processeur en surcharge
+2025-03-12 14:37:44,229 - CRITICAL - Fichier introuvable
+2025-03-12 14:37:44,330 - INFO - Connexion réussie
+2025-03-12 14:37:44,431 - CRITICAL - Redémarrage du service
+2025-03-12 14:37:44,531 - ERROR - Tentative d'accès non autorisée
+2025-03-12 14:37:44,632 - CRITICAL - Mémoire insuffisante
+2025-03-12 14:37:44,733 - CRITICAL - Processeur en surcharge
+2025-03-12 14:37:44,834 - INFO - Tentative d'accès non autorisée
+2025-03-12 14:37:44,935 - INFO - Mise à jour du fichier de configuration
+2025-03-12 14:37:45,035 - CRITICAL - Mémoire insuffisante
+2025-03-12 14:37:45,136 - WARNING - Processeur en surcharge
+2025-03-12 14:37:45,237 - WARNING - Connexion réussie
+2025-03-12 14:37:45,338 - DEBUG - Mémoire insuffisante
+2025-03-12 14:37:45,439 - DEBUG - Tentative d'accès non autorisée
+2025-03-12 14:37:45,539 - WARNING - Opération effectuée avec succès
+2025-03-12 14:37:45,640 - INFO - Connexion réussie
+2025-03-12 14:37:45,741 - ERROR - Opération effectuée avec succès
+2025-03-12 14:37:45,842 - INFO - Connexion réussie
+2025-03-12 14:37:45,943 - DEBUG - Mémoire insuffisante
+2025-03-12 14:37:46,044 - DEBUG - Opération effectuée avec succès
+2025-03-12 14:37:46,145 - WARNING - Fichier introuvable
+2025-03-12 14:37:46,246 - ERROR - Mise à jour du fichier de configuration
+2025-03-12 14:37:46,346 - WARNING - Connexion réussie
+2025-03-12 14:37:46,447 - WARNING - Erreur d'authentification
+2025-03-12 14:37:46,547 - CRITICAL - Tentative d'accès non autorisée
+2025-03-12 14:37:46,648 - CRITICAL - Fichier introuvable
+2025-03-12 14:37:46,749 - INFO - Opération effectuée avec succès
+2025-03-12 14:37:46,850 - INFO - Erreur d'authentification
+2025-03-12 14:37:46,951 - DEBUG - Déconnexion de l'utilisateur
+2025-03-12 14:37:47,051 - DEBUG - Mémoire insuffisante
+2025-03-12 14:37:47,152 - ERROR - Erreur d'authentification
+2025-03-12 14:37:47,253 - CRITICAL - Mise à jour du fichier de configuration
+2025-03-12 14:37:47,355 - WARNING - Mémoire insuffisante
+2025-03-12 14:37:47,455 - DEBUG - Mémoire insuffisante
+2025-03-12 14:37:47,556 - ERROR - Tentative d'accès non autorisée
+2025-03-12 14:37:47,657 - CRITICAL - Mémoire insuffisante
+2025-03-12 14:37:47,758 - CRITICAL - Tentative d'accès non autorisée
+2025-03-12 14:37:47,859 - WARNING - Mémoire insuffisante
+2025-03-12 14:37:47,960 - DEBUG - Erreur d'authentification

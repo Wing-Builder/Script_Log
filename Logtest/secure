@@ -1,0 +1,50 @@
+2025-03-12 14:37:10,361 - ERROR - Connexion réussie
+2025-03-12 14:37:10,461 - CRITICAL - Erreur d'authentification
+2025-03-12 14:37:10,562 - DEBUG - Tentative d'accès non autorisée
+2025-03-12 14:37:10,663 - CRITICAL - Connexion réussie
+2025-03-12 14:37:10,764 - ERROR - Processeur en surcharge
+2025-03-12 14:37:10,865 - DEBUG - Tentative d'accès non autorisée
+2025-03-12 14:37:10,966 - WARNING - Déconnexion de l'utilisateur
+2025-03-12 14:37:11,067 - ERROR - Processeur en surcharge
+2025-03-12 14:37:11,167 - WARNING - Mémoire insuffisante
+2025-03-12 14:37:11,268 - CRITICAL - Erreur d'authentification
+2025-03-12 14:37:11,369 - DEBUG - Fichier introuvable
+2025-03-12 14:37:11,470 - WARNING - Déconnexion de l'utilisateur
+2025-03-12 14:37:11,571 - INFO - Déconnexion de l'utilisateur
+2025-03-12 14:37:11,676 - INFO - Fichier introuvable
+2025-03-12 14:37:11,777 - WARNING - Opération effectuée avec succès
+2025-03-12 14:37:11,878 - DEBUG - Connexion réussie
+2025-03-12 14:37:11,979 - CRITICAL - Opération effectuée avec succès
+2025-03-12 14:37:12,080 - WARNING - Tentative d'accès non autorisée
+2025-03-12 14:37:12,181 - ERROR - Connexion réussie
+2025-03-12 14:37:12,281 - WARNING - Mémoire insuffisante
+2025-03-12 14:37:12,382 - ERROR - Redémarrage du service
+2025-03-12 14:37:12,483 - DEBUG - Mise à jour du fichier de configuration
+2025-03-12 14:37:12,584 - ERROR - Processeur en surcharge
+2025-03-12 14:37:12,684 - WARNING - Redémarrage du service
+2025-03-12 14:37:12,785 - INFO - Erreur d'authentification
+2025-03-12 14:37:12,886 - CRITICAL - Connexion réussie
+2025-03-12 14:37:12,987 - ERROR - Redémarrage du service
+2025-03-12 14:37:13,088 - CRITICAL - Mise à jour du fichier de configuration
+2025-03-12 14:37:13,188 - DEBUG - Connexion réussie
+2025-03-12 14:37:13,290 - ERROR - Fichier introuvable
+2025-03-12 14:37:13,391 - CRITICAL - Mise à jour du fichier de configuration
+2025-03-12 14:37:13,492 - CRITICAL - Connexion réussie
+2025-03-12 14:37:13,593 - WARNING - Opération effectuée avec succès
+2025-03-12 14:37:13,694 - DEBUG - Redémarrage du service
+2025-03-12 14:37:13,795 - INFO - Opération effectuée avec succès
+2025-03-12 14:37:13,896 - INFO - Mémoire insuffisante
+2025-03-12 14:37:13,996 - CRITICAL - Redémarrage du service
+2025-03-12 14:37:14,097 - WARNING - Déconnexion de l'utilisateur
+2025-03-12 14:37:14,198 - DEBUG - Mise à jour du fichier de configuration
+2025-03-12 14:37:14,299 - WARNING - Fichier introuvable
+2025-03-12 14:37:14,400 - ERROR - Déconnexion de l'utilisateur
+2025-03-12 14:37:14,500 - DEBUG - Redémarrage du service
+2025-03-12 14:37:14,601 - CRITICAL - Mise à jour du fichier de configuration
+2025-03-12 14:37:14,702 - INFO - Connexion réussie
+2025-03-12 14:37:14,803 - INFO - Redémarrage du service
+2025-03-12 14:37:14,904 - WARNING - Mise à jour du fichier de configuration
+2025-03-12 14:37:15,004 - CRITICAL - Connexion réussie
+2025-03-12 14:37:15,105 - WARNING - Tentative d'accès non autorisée
+2025-03-12 14:37:15,206 - CRITICAL - Mémoire insuffisante
+2025-03-12 14:37:15,307 - DEBUG - Déconnexion de l'utilisateur
