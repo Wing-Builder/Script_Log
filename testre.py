@@ -3,7 +3,7 @@ import re
 log_line = "2025-03-12 14:38:42,530 - CRITICAL - Tentative d'acc�s non autoris�e"
 
 # Modifié pour capturer la date/heure et l'événement
-regex = r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (CRITICAL|INFO|WARNING) - (.+)$"
+regex = r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (CRITICAL|INFO|WARNING|DEBUG|) - (.+)$"
 
 match = re.search(regex, log_line)
 if match:

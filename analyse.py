@@ -14,15 +14,20 @@ def main():
     #Création d'une instance logreader avec le chemin du repertoire
     lecteur = LogReader(args.repertoire)
     #Trouver tous les fichiers de logs dans le répertoire
-    fichiers_logs = lecteur.trouver_fichiers_logs()
+    fichiers_logs = lecteur.trouver_fichiers_logs(pattern=args.pattern)
 
     #Si les fichiers sont trouvés, les lire un par un
     if fichiers_logs:
         for fichier_log in fichiers_logs:
             print(f"\nLecture du fichier: {fichier_log}")
-            lecteur.lire_logs(fichier_log) #lire le fichier de log
+            lecteur.lire_et_extraire_logs(fichier_log) #lire le fichier de log
 
-        lecteur.afficher_lignes_lues()
+        #Créer le DataFrame une fois que tous les fichiers sont lus
+        lecteur.creer_dataframe()
+
+        #Afficher le DataFrame contenant les informations extraites
+        lecteur.afficher_dataframe()
+
     else:
         print("Aucun fichier de logs trouvé dans le répertoire.")
 
