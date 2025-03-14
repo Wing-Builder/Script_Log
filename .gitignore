@@ -4,6 +4,7 @@ __pycache__/
 *$py.class
 
 env/
+testre.py
 
 # C extensions
 *.so
