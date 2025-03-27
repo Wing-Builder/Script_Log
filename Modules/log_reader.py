@@ -10,7 +10,7 @@ class LogReader:
         Initialise un lecteur de logs avec une liste vide pour stocker les lignes lues.
         """
         self.repertoire = repertoire #Attribut pour stocker le chemin d'un répertoire
-        self.df_logs = pd.DataFrame(columns=['Date/Heure', 'Niveau', 'Événement'])
+        self.df_logs = pd.DataFrame(columns=["Date/Heure", "Événement", "AdresseIP"])
         self.lignes_extraites = [] # Accumulations de lignes extraites
 
 
@@ -29,41 +29,87 @@ class LogReader:
             print(f"Erreur : le dossier {self.repertoire} , n'a pas été trouvé.")
             return []
 
+    # def lire_et_extraire_logs(self, fichier_log):
+    #     """
+    #     Lit un fichier de logs et renvoie son contenu sous forme de liste de lignes.
+        
+    #     Paramètres:
+    #     fichier_log (str) : Chemin vers le fichier de logs à lire.
+
+    #     Retourne :
+    #     list : Liste contenant chaque ligne du fichier de logs.
+    #     """
+    #     regex = r"^([A-Za-z]+.*[0-9]{2}:[0-9]{2}:[0-9]{2}(\.[0-9]{1,3})?.*([A-Za-z]+( [A-Za-z]+)+)\[.*\].*([A-Za-z]+( [A-Za-z]+)+).*\b(?:(?:2(?:[0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9])\.){3}(?:(?:2([0-4][0-9]|5[0-5])|[0-1]?[0-9]?[0-9]))\b(\s([A-Za-z]+\s)+)"
+    #     # regex = r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (CRITICAL|INFO|WARNING|ERROR) - (.+)$"
+
+    #     try:
+    #         with open(fichier_log, 'r') as f:
+    #             for ligne in f:
+    #                 match = re.search(regex, ligne)
+    #                 if match:
+    #                     date_heure = match.group(1)  # Date et heure capturées dans le 1er groupe
+    #                     niveau = match.group(2)      # Niveau du log capturé dans le 2e groupe
+    #                     evenement = match.group(3)   # Événement capturé dans le 3e groupe
+    #                     adresseIP = match.group(4)
+
+    #                     nouvelle_ligne = {
+    #                         'Date/Heure': date_heure,
+    #                         'Niveau': niveau,
+    #                         'Événement': evenement,
+    #                         'AdresseIP' : adresseIP
+    #                     }
+    #                     self.lignes_extraites.append(nouvelle_ligne)
+
+    #                     nouvelle_ligne_df = pd.DataFrame([nouvelle_ligne])
+    #                     self.df_logs = pd.concat([self.df_logs, nouvelle_ligne_df], ignore_index=True)
+
+    #         print(f"Le fichier {fichier_log} a été lu et les infos ont été extraites avec succès.")
+    #     except FileNotFoundError:
+    #         print(f"Erreur : Le fichier {fichier_log} n'a pas été trouvé.")
+    #         # self.lignes_lues = [] #réinitialisation en cas d'erreur
+
     def lire_et_extraire_logs(self, fichier_log):
         """
-        Lit un fichier de logs et renvoie son contenu sous forme de liste de lignes.
-        
-        Paramètres:
+        Lit un fichier de logs et extrait les informations sous forme de dictionnaire.
+
+        Paramètres :
         fichier_log (str) : Chemin vers le fichier de logs à lire.
 
         Retourne :
-        list : Liste contenant chaque ligne du fichier de logs.
+        list : Liste contenant les logs extraits sous forme de dictionnaires.
         """
-        regex = r"^(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2},\d{3}) - (CRITICAL|INFO|WARNING|ERROR) - (.+)$"
+        regex = r"^([A-Z][a-z]{2} \d{1,2} \d{2}:\d{2}:\d{2}) (Failed password|Invalid user) from (\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3})$"
 
         try:
             with open(fichier_log, 'r') as f:
                 for ligne in f:
                     match = re.search(regex, ligne)
                     if match:
-                        date_heure = match.group(1)  # Date et heure capturées dans le 1er groupe
-                        niveau = match.group(2)      # Niveau du log capturé dans le 2e groupe
-                        evenement = match.group(3)   # Événement capturé dans le 3e groupe
+                        date_heure = match.group(1)  # Date et heure
+                        evenement = match.group(2)   # Événement (Failed password / Invalid user)
+                        adresse_ip = match.group(3)  # Adresse IP
 
                         nouvelle_ligne = {
-                            'Date/Heure': date_heure,
-                            'Niveau': niveau,
-                            'Événement': evenement
+                            "Date/Heure": date_heure,
+                            "Événement": evenement,
+                            "AdresseIP": adresse_ip
                         }
                         self.lignes_extraites.append(nouvelle_ligne)
 
+                        # Ajouter à un DataFrame
                         nouvelle_ligne_df = pd.DataFrame([nouvelle_ligne])
                         self.df_logs = pd.concat([self.df_logs, nouvelle_ligne_df], ignore_index=True)
 
-            print(f"Le fichier {fichier_log} a été lu et les infos ont été extraites avec succès.")
+            print(f"Le fichier '{fichier_log}' a été lu et les logs ont été extraits avec succès.")
+
         except FileNotFoundError:
-            print(f"Erreur : Le fichier {fichier_log} n'a pas été trouvé.")
-            # self.lignes_lues = [] #réinitialisation en cas d'erreur
+            print(f"Erreur : Le fichier '{fichier_log}' n'a pas été trouvé.")
+
+# Exemple d'utilisation :
+# parser = LogParser()
+# parser.lire_et_extraire_logs("auth_logs_linux_200.log")
+# print(parser.df_logs.head())
+
 
     def creer_dataframe(self):
         """
@@ -75,7 +121,7 @@ class LogReader:
             self.lignes_extraites.clear() #effacer la liste des lignes pour économiser la mémoire
             print("Le dataframe a été créé  avec succès.")
         else:
-            print("Aucune ligne extraite. ALe dataframe est vide.")
+            print("Aucune ligne extraite. Le dataframe est vide.")
 
     def afficher_dataframe(self):
         """

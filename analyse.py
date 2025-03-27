@@ -5,7 +5,7 @@ from Modules.log_analyzer import LogAnalyzer
 def main():
     parser = argparse.ArgumentParser(description="Script d'analyse de logs")
     parser.add_argument("repertoire", help="Chemin vers les fichiers de logs à analyser", type=str)
-    parser.add_argument("--pattern", help="Pattern pour filtrer les fichiers de logs (Par défaut 'secure*')", type=str, default="secure*")
+    parser.add_argument("--pattern", help="Pattern pour filtrer les fichiers de logs (Par défaut 'secure*')", type=str, default="auth_logs*")
     parser.add_argument("--seuil", help="Seuil d'alertes pour les adresses IP suspectes", type=int, default=100)
     args = parser.parse_args()
 
@@ -28,7 +28,7 @@ def main():
         analyseur = LogAnalyzer(lecteur.df_logs)
 
         #Analyser la fréquence des adresses IP
-        analyseur.analyser_frequence_ips(seuil_alertes=args.seuil)
+        analyseur.analyser_frequence_ips(seuil_alerte=args.seuil)
 
         #Afficher le DataFrame contenant les informations extraites
         # lecteur.afficher_dataframe()

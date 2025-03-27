@@ -8,7 +8,7 @@ class LogAnalyzer:
         Paramètres : 
         df_logs (pd.DataFrame) : Le DataFrame contenant les informations extraites des logs.
         """
-
+        
         self.df_logs = df_logs
 
 
