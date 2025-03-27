@@ -1,5 +1,6 @@
 import argparse
 from Modules.log_reader import LogReader
+from Modules.log_analyzer import LogAnalyzer
 
 def main():
     parser = argparse.ArgumentParser(description="Script d'analyse de logs")
