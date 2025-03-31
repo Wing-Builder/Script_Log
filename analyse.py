@@ -5,8 +5,9 @@ from Modules.log_analyzer import LogAnalyzer
 def main():
     parser = argparse.ArgumentParser(description="Script d'analyse de logs")
     parser.add_argument("repertoire", help="Chemin vers les fichiers de logs à analyser", type=str)
-    parser.add_argument("--pattern", help="Pattern pour filtrer les fichiers de logs (Par défaut 'secure*')", type=str, default="auth_logs*")
-    parser.add_argument("--seuil", help="Seuil d'alertes pour les adresses IP suspectes", type=int, default=100)
+    parser.add_argument("--pattern", help="Pattern pour filtrer les fichiers de logs (Par défaut 'auth_logs*')", type=str, default="auth_logs*")
+    parser.add_argument("--seuil", help="Seuil d'alertes pour les adresses IP suspectes", type=int, default=10)
+    parser.add_argument("--intervalle", help="Intervalle de temps pour analyse des accès (Par défaut = 1min)", type=str, default="1min")
     args = parser.parse_args()
 
     #Création d'une instance logreader avec le chemin du repertoire
